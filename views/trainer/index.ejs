@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/styles/auth.css" />
+  <title>User Index</title>
+</head>
+
+<body>
+  <h1>
+    Welcome Back <%= user.username %>
+  </h1>
+  <p>
+    From here you can <a href="/trainer/new">Make a New Trainer</a>. This will
+    let you keep track of multiple collections from one account! <a href="/pokemon" style="font-size: smaller;">|Back to
+      Pokedex|</a>
+  </p>
+  <ul>
+    <% for( let i = 0; i < user.trainers.length; i++ ) { %>
+    <li>
+      <a href="trainer/<%=user.trainers[i]._id%>"><%= user.trainers[i].trainerName %></a>
+      <img src="https://img.pokemondb.net/sprites/home/normal/<%= (user.trainers[i].favPokemon.toLowerCase()) %>.png"
+        alt="<%= user.trainers[i].favPokemon %>" />
+      <form action="/trainer?_method=DELETE" method="POST">
+        <input type="checkbox" id="id" name="id" value="<%=user.trainers[i]._id%>" />
+        <button type="submit" class="btn btn-outline-danger">Delete</button>
+      </form>
+    </li>
+    <% } %>
+  </ul>
+</body>
+
+<%- include('../partials/_footer') %>
+
+</html>

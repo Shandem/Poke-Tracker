@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/auth.css" />
+    <script src="/scripts/pokemonDelete.js" defer></script>
+    <title>Trainer Card</title>
+  </head>
+
+  <body>
+    <%- include('../partials/_nav') %>
+    <br /><br /><br /><br />
+    <div class="trainer_card">
+      <h1>show trainer</h1>
+      <h4>&nbsp;<strong>Username:</strong> <%= trainer.trainerName %></h4>
+      <span style="font-size: small;"
+        ><a href="/trainer/<%= trainer._id%>/edit"
+          >&nbsp;|Edit Trainer|</a
+        ></span
+      >
+      <h4>&nbsp;<strong>favPokemon:</strong><%= trainer.favPokemon %></h4>
+      <h4>&nbsp;<strong>Go Team:</strong><%= trainer.goTeam %></h4>
+      <h4>&nbsp;<strong>About Me:</strong><%= trainer.trainerName %></h4>
+      <h4>
+        &nbsp;<strong>Pokemon:</strong
+        ><span style="font-size: small;"
+          ><a href="/trainer/<%= trainer._id%>/pokemon/add"
+            >| Add Pokemon |</a
+          ></span
+        >
+      </h4>
+      <% for( let i = 0; i < trainer.pokemon.length; i++ ) { %>
+      <p>
+        <a href="/pokemon/<%= trainer.pokemon[i] %>">
+          <li>
+            <%= trainer.pokemon[i] %>
+            <img
+              src="https://img.pokemondb.net/sprites/home/normal/<%= trainer.pokemon[i] %>.png"
+              alt="<%= trainer.pokemon[i] %>"
+            />
+            <form
+              action="/trainer/<%=trainer._id%>?_method=DELETE"
+              method="POST"
+            >
+              <button
+                class="btn btn-outline-danger"
+                id="id"
+                name="id"
+                value="<%=[i]%>"
+                type="submit"
+              >
+                Delete
+              </button>
+            </form>
+          </li>
+        </a>
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>

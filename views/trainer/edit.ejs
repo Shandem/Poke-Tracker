@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/auth.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include('../partials/_nav') %>
+  <div class="trainers_card">
+    <br><br>
+    <h1>Trainers Edit Page</h1>
+    <p style="font-size: small;"><a href="/trainer/<%= trainer._id %>">&nbsp;&nbsp;|Back to Trainer's card|</a></p>
+    <!--Replace defult value with the envoked obj:keyvaule-->
+    <div class="trainer__elements">
+      <form action="/trainer/<%= trainer._id%>?_method=PUT " method="POST">
+        <div>
+          <label for="trainerName">Trainer Name</label><br />
+          <input type="text" id="trainerName" name="trainerName" value="<%=trainer.trainerName%>" />
+        </div>
+        <div>
+          <label for="favPokemon">Favorite Pokemon </label><br />
+          <input type="text" id="favPokemon" name="favPokemon" value="<%=trainer.favPokemon%>" />
+        </div>
+        <div>
+          <label for="goTeam">Pokemon Go Team </label><br />
+          <select id="goTeam" name="goTeam">
+            <option value="<%= trainer.goTeam%>" disabled>You picked last time:<%= trainer.goTeam%></option>
+            <option value="Valor">Valor</option>
+            <option value="Mystic">Mystic</option>
+            <option value="Instinct">Instinct</option>
+            <option value="n/a">N/A</option>
+          </select>
+        </div>
+        <div>
+          <label for="aboutMe">About Me</label><br />
+          <textarea name="aboutMe" id="aboutMe" value="<%= trainer.aboutMe%>" cols="50" rows="10"></textarea>
+        </div>
+        <input type="submit" value="Submit" />
+    </div>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
+      format("svg");
+}
+
+body {
+  background-color: #3b4cca;
+  font-family: "Pokemon";
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.container {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  border-radius: 45px;
+  margin-left: 570px;
+}
+
+footer {
+  position: absolute;
+  top: 90vh;
+}
+.nav_ul {
+  position: absolute;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex: left;
+  justify-content: space-evenly;
+  width: 100vw;
+  color: #C4D44C;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.pokemonContainer{
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    flex: left;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.moves_container{
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    flex: left;
+    flex-wrap: wrap;
+}
+.show_container{
+    margin-left: 10px;
+    padding-top: 65px;
+}
+.pokemon_name{
+    text-transform: capitalize;
+    color: #00AAE9;
+    font-weight: 700;
+}
+.pokemon_stats{
+    margin: auto;
+    width: 50%;
+    border: 3px solid #CE17E8;
+    padding: 10px;
+    text-align: center;
+}
+.dexbody {
+  width: 1000px;
+  height: 450px;
+  border: 1px solid #000;
+  background: #d44338;
+  border-radius: 20px;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+.dextail {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #d44338;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  position: absolute;
+  top: 650px;
+  left: 590px;
+}
+.dexneck {
+  width: 60px;
+  height: 100px;
+  z-index: 1;
+  background: #d44338;
+  position: absolute;
+  top: 105px;
+  left: 610px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.dexneck-right {
+  width: 70px;
+  height: 60px;
+  background: #d44338;
+  left: 610px;
+  top: 50px;
+  position: absolute;
+  border-radius: 5px 60px 0px 0px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+}
+.dexneck-tip {
+  width: 0;
+  height: 0;
+  border-right: 40px solid #d44338;
+  border-top: 75px solid transparent;
+  border-left: 45px solid transparent;
+  border-bottom: 30px solid #d44338;
+  left: 609px;
+  top: 13px;
+  position: absolute;
+  border-radius: px 0px 5px 5px;
+}
+.left_eye{
+  z-index: 1;
+    position: absolute;
+    height:45px;
+    width:200px;
+    border-radius: 90px / 45px;
+    background: #EDECEF;
+    transform: rotate(70deg);
+    margin-left: 30%;
+    margin-top: 15%;
+}
+.right_eye{
+    position: absolute;
+    height:45px;
+    width:180px;
+    border-radius: 90px / 45px;
+    background: #EDECEF;
+    transform: rotate(-70deg);
+    margin-left: 50%;
+    margin-top: 15%;
+}
+.rotom_head{
+    position: absolute;
+    height:350px;
+    width:350px;
+    border-radius: 300px;
+    background: transparent;
+    border: 3px solid black;
+    margin-left: 31%;
+    top:11%;
+}
+.left_slit{
+  
+    position: absolute;
+    border-top: 3px solid black;
+    width: 47px;
+    transform: rotate(75deg);
+    left: 60px;
+    top: 21px; 
+}
+.right__slit{
+    position: absolute;
+    border-top: 3px solid black;
+    width: 47px;
+    transform: rotate(-75deg);
+    bottom: 20px;
+    right: 60px;
+}
+.left_eyeris{
+  position: absolute;
+  height:25px;
+  width:140px;
+  border-radius: 90px / 45px;
+  background: rgb(126,194,218);
+  background: linear-gradient(70deg, rgba(126,194,218,1) 0%, rgba(145,218,238,1) 50%, rgba(177,242,248,1) 100%);
+  transform: rotate(180deg);
+  top: 10px;
+  left: 25px;
+}
+.right_eyeris{
+  position: absolute;
+  height:25px;
+  width:140px;
+  border-radius: 90px / 45px;
+  background: rgb(126,194,218);
+  background: linear-gradient(70deg, rgba(126,194,218,1) 0%, rgba(145,218,238,1) 50%, rgba(177,242,248,1) 100%);
+  transform: rotate(0deg);
+  bottom: 10px;
+  left: 15px;
+}
+.rotom_full{
+  position: absolute;
+  left: 100px;
+  top:0px;
+}
+.rotom_mouth{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex: right;
+  justify-content: center;
+  width: 200px;
+  margin-left: 39%;
+  margin-top: 29%;
+}
+.rotom_mouth_left{
+  position: relative;
+  width:50px; 
+  height:35px; 
+  border:1px solid #000; 
+  background: white;
+  border-radius: 0 0 0 90px;
+}
+.rotom_mouth_center{
+  position: relative;
+  width:25px; 
+     height:35px; 
+     border:1px solid #000; 
+     background:white;
+     padding-left: 20px;
+}
+.rotom_mouth_right{
+  position: relative;
+  width:50px; 
+  height:35px; 
+  border:1px solid #000; 
+  background: white;
+  border-radius: 0 0 90px 0;
+}
+li {
+  color: #fff;
+  position: absolute;
+    z-index: 2;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+li:hover {
+  background: #d44338;
+  cursor: pointer;
+  opacity: .7;
+}
+
+ul li ul {
+  background: #d44338;
+  visibility: hidden;
+opacity: 0;
+min-width: 5rem;
+  position: absolute;
+transition: all 0.5s ease;
+margin-top: 1rem;
+  left: 0;
+display: none;
+
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+visibility: visible;
+opacity: 1;
+display: block;
+}
+
+ul li ul li {
+  clear: both;
+width: 100%;
+}
+#h2__t__add{
+  margin-left: 600px;
+}
+.edit_container{
+  
+}
+.sticky_container{
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 600px;
+  float: right;
+}
+.pokemonContainer > li,
+.pokemonContainer > a > li,
+.pokemonContainer > h1{
+  text-transform: capitalize;
+}

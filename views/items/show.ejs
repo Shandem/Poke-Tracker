@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/catalog.css" />
+  <title><%= item.name %></title>
+</head>
+
+<body>
+  <%- include('../partials/_nav') %>
+  <br>
+  <div class="item_container">
+    <h1 style="font-size: xx-large; text-transform: capitalize; color:#ffde00; "><%= item.name %></h1>
+    <img src="<%=item.sprites.default%>" alt="<%= item.name %>" />
+    <h4>Item Number: <%= item.id %></h4>
+    <h4>Cost: <%= item.cost %></h4>
+    <h4>Fling Effect: <%= item.fling_effect %></h4>
+    <h4>Fling Power: <%= item.fling_power %></h4>
+    <h4>Effects</h4>
+    <p><%= item.effect_entries[0].short_effect %></p>
+    <h4>Other Languages</h4>
+    <% item.names.forEach((name) => { %>
+    <p>Language: <%= name.language.name %> | Name: <%= name.name %> |</p>
+    <% }) %>
+  </div>
+</body>
+
+</html>

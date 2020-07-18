@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+  }
+  @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+  @font-face {
+    font-family: "Pokemon";
+    src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+    src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
+        format("svg");
+  }
+  
+  body {
+    background-color: #3b4cca;
+    font-family: "Pokemon";
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .berries_container{
+      width: 800px;
+      margin: auto;
+  }
+  .berry_show{
+    width: 300px;
+    margin: auto;
+    text-align: left;
+}
+  .nav_ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex: left;
+    justify-content: space-evenly;
+    font-weight: 200;
+}
+a{
+    text-decoration: none
+}
+  
+li {
+  color: #fff;
+  position: absolute;
+    z-index: 2;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+li:hover {
+  background: #d44338;
+  cursor: pointer;
+  opacity: .7;
+}
+
+ul li ul {
+  background: #d44338;
+  visibility: hidden;
+opacity: 0;
+min-width: 5rem;
+  position: absolute;
+transition: all 0.5s ease;
+margin-top: 1rem;
+  left: 0;
+display: none;
+
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+visibility: visible;
+opacity: 1;
+display: block;
+}
+
+ul li ul li {
+  clear: both;
+width: 100%;
+}
+footer {
+    position: absolute;
+    top: 90vh;
+}
+.item_container{
+    width: 550px;
+    margin: auto;
+}

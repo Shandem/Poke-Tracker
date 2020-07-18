@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/styles/auth.css" />
+  <title>Registration</title>
+</head>
+
+<body>
+  <%- include('../partials/_nav') %>
+  <br><br><br><br><br><br><br>
+  <div class="regContainer">
+    <form action="/auth/register" method="POST">
+      <div class="reg__elements">
+        <h1 id="h1__reg">Registration</h1>
+        <div>
+          <label for="username">Username</label><br />
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="firstName">First Name</label><br />
+          <input type="text" id="firstName" name="firstName" />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label><br />
+          <input type="text" id="lastName" name="lastName" />
+        </div>
+        <div>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" />
+        </div>
+        <div>
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" />
+        </div>
+      </div>
+      <br><br>
+      <input class="btn btn-outline-success" id="reg__submit" type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+<%- include('../partials/_footer') %>

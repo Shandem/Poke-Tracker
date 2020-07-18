@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/catalog.css" />
+  <title>Items Index</title>
+</head>
+
+<body>
+  <%- include('../partials/_nav') %>
+  <div class="berries_container">
+    <br /><br /><br />
+    <h1 style="font-size: xx-large; color: #ffde00;">Items</h1>
+    <% for(let i = 0; i < items.results.length; i++) { %>
+    <a href="/items/<%= items.results[i].name %>">
+      <li>
+        <%= items.results[i].name.charAt(0).toUpperCase() +
+          items.results[i].name.slice(1) %>
+      </li>
+    </a>
+    <% } %>
+  </div>
+</body>
+
+</html>
